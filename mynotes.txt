@@ -1,0 +1,17 @@
+=== TASK ===
+
+Buatlah aplikasi InstaApp (mirip dengan Instagram)
+Scope:
+a. Register dan Login
+b. Posting text gambar
+c. Like dan komentar
+d. Autentifikasi pengguna
+e. Hak akses terhadap post, like, dan komentar
+Spesifikasi:
+a. Bahasa/framework yang digunakan adalah PHP
+b. Database dapat menggunakan RDBMS atau NoSQL
+c. Menggunakan frontend dan backend (API) merupakan nilai tambah
+d. UI/UX menarik merupakan nilai tambah
+
+
+==========

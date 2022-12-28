@@ -19,8 +19,9 @@ class UserFactory extends Factory
     {
         $fake_name = fake()->name();
         $explo = explode(" ", $fake_name);
-        $username = Str::lower($explo[0].substr($explo[1], 0, 1)."123") ;
+        $username = Str::lower($explo[0].substr($explo[1], 0, 1)) ;
         $email = $username."@gmail.com";
+        $password = bcrypt($username."123");
 
         return [
             // 'name' => fake()->name(),
@@ -30,7 +31,8 @@ class UserFactory extends Factory
             'username' => $username,
             'email' => $email,
             'email_verified_at' => now(),
-            'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', // password
+            // 'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', // password
+            'password' => $password, // password
             'remember_token' => Str::random(10),
         ];
     }

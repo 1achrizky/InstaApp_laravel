@@ -16,6 +16,8 @@ d. UI/UX menarik merupakan nilai tambah
 
 ==========
 
+php artisan migrate:fresh --seed
+
 Create new model+factory
 >>php artisan make:model User  -f
 
@@ -33,5 +35,25 @@ username+{initial pertama kata kedua}+123
 
 ==port serve laravel
 >>php artisan serve --port=8001
+
+[==buat dashboard untuk Posting
+>>php artisan make:controller DashboardPostController --resource
+
+==images
+https://source.unsplash.com/400x400?Web Design
+https://source.unsplash.com/400x400?fullhd
+
+
+==buat model+migration of Post
+>>php artisan make:model Post -mf
+
+
+*****
+Create Migration with Table:
+php artisan make:migration create_posts_table --table=posts
+
+*****
+
+
 
 

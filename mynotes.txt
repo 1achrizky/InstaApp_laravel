@@ -16,8 +16,8 @@ d. UI/UX menarik merupakan nilai tambah
 
 ==========
 
-
-php artisan make:model User  -f
+Create new model+factory
+>>php artisan make:model User  -f
 
 ==buat faker
 di config\app.php:
@@ -26,5 +26,12 @@ di config\app.php:
 
 di .env:
 FAKER_LOCALE=id_ID
+
+==login:
+username+{initial pertama kata kedua}+123
+
+
+==port serve laravel
+>>php artisan serve --port=8001
 
 

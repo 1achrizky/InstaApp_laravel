@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\DashboardPostController;
+use App\Http\Controllers\PostController;
 
 /*
 |--------------------------------------------------------------------------
@@ -39,8 +40,7 @@ Route::get('/logout', [LoginController::class, 'logout']);
 
 Route::get('/dashboard', function(){
     return view('dashboard.index');
-});
-// })->middleware('auth');
+})->middleware('auth');
 
 
 // Route::get('/dashboard/posts/create', function () {
@@ -50,3 +50,7 @@ Route::get('/dashboard', function(){
 // });
 
 Route::resource('/dashboard/posts', DashboardPostController::class)->middleware('auth');
+
+
+Route::get('/posts', [PostController::class, 'index']);
+Route::get('/posts/{post:id}', [PostController::class, 'show']);

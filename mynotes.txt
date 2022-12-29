@@ -54,6 +54,22 @@ php artisan make:migration create_posts_table --table=posts
 
 *****
 
+==PostController, to show
+
+== bila di /dashboard tidak diberi middleware('auth'), akan muncul error minta variable nama login.
+Route::get('/dashboard', function(){
+    return view('dashboard.index');
+})->middleware('auth');
+
+== penyimpanan image
+di file .env, ubah jadi public:
+FILESYSTEM_DISK=public
+
+
+
+
+--------
+tambah field: like, comment
 
 
 

@@ -65,7 +65,7 @@ Route::get('/dashboard', function(){
 di file .env, ubah jadi public:
 FILESYSTEM_DISK=public
 
-
+php artisan storage:link
 
 
 --------
